@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: delhivery-deployment
+spec:
+  selector:
+    matchLabels:
+      app: delhivery
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: delhivery
+    spec:
+      containers:
+        - name: delhivery
+          image: rohin07/delhivery:1.1.1-5
+          resources:
+            requests:
+              cpu: 500m
+              memory: 0.5Gi
+            limits:
+              cpu: 1000m
+              memory: 1Gi
+          ports:
+            - containerPort: 8082

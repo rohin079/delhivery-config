@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: delhivery-rollouts
+spec:
+  ports:
+    - port: 8082
+      targetPort: 8082
+  selector:
+    app: delhivery-rollouts
