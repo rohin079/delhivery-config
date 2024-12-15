@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: delhivery
-          image: rohin07/delhivery:1.1.1-8
+          image: rohin07/delhivery:1.1.1-9
           resources:
             requests:
               cpu: 500m
